@@ -5,3 +5,9 @@ home_path:
 properties_index_path:
     path: /biens
     controller: App\Controller\PropertyController::index
+
+property_show_path:
+    path: /biens/{slug}-{id}
+    controller: App\Controller\PropertyController::show
+    requirements:
+        slug: '[a-z0-9\-]*'
